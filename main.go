@@ -64,8 +64,10 @@ func main() {
 		}
 		tempF := tempC*1.8 + 32.0
 
+		dewPoint := tempF - ((100.0 - humidity) * (9.0/25.0))
+
 		if *logResults {
-			log.Printf("temperature %.1f degF (%.1f degC); humidity %.1f%%", tempF, tempC, humidity)
+			log.Printf("temperature %.1f degF (%.1f degC); humidity %.1f%%; approx. dew point %.1f degF", tempF, tempC, humidity, dewPoint)
 		}
 
 		point := influxdb2.NewPoint(
@@ -75,6 +77,7 @@ func main() {
 				"temperature_f": tempF,
 				"temperature_c": tempC,
 				"humidity":      humidity,
+				"dew_point_f":   dewPoint,
 			}, // fields
 			atTime,
 		)
