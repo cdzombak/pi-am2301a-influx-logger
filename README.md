@@ -1,5 +1,7 @@
 # pi-am2301a-influx-logger
 
+Logs temperature and humidity readings, on a regular basis, to InfluxDB from an AM2301/DHT21 sensor attached to a Raspberry Pi.
+
 ## Compiling
 
 The DHT library uses C under the hood, so cross-compiling as with normal Go code doesn't work, and I haven't bothered to figure out how to fix it.
