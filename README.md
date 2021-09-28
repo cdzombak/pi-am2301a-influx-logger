@@ -15,21 +15,21 @@ Aside from that, connect the sensor's power and ground wires to the 5V supply (p
 ## Usage
 
 - `-gpio-pin int`: GPIO pin the sensor is connected to. (default `4`)
-- `-humid-max int`: Maximum relative humidity reading. Readings outside this range are discarded. (default 100)
-- `-humid-min int`: Minimum relative humidity reading. Readings outside this range are discarded.
-- `-influx-attempts uint`: Number of attempts to make to send a reading to InfluxDB. (default 3)
-- `-influx-bucket string`: InfluxDB bucket. Supply a string in the form 'database/retention-policy'. For the default retention policy, pass just a database name (without the slash character). Required.
+- `-humid-max int`: Maximum relative humidity reading. Readings outside this range are discarded. (default `100`)
+- `-humid-min int`: Minimum relative humidity reading. Readings outside this range are discarded. (default `0`)
+- `-influx-attempts uint`: Number of attempts to make to send a reading to InfluxDB. (default `3`)
+- `-influx-bucket string`: InfluxDB bucket. Supply a string in the form `database/retention-policy`. For the default retention policy, pass just a database name (without the slash character). Required.
 - `-influx-password string`: InfluxDB password.
-- `-influx-server string`: InfluxDB server, including protocol and port, eg. 'http://192.168.1.1:8086'. Required.
-- `-influx-timeout int`: InfluxDB request timeout, in seconds. (default 3)
+- `-influx-server string`: InfluxDB server, including protocol and port, eg. `http://192.168.1.1:8086`. Required.
+- `-influx-timeout int`: InfluxDB request timeout, in seconds. (default `3`)
 - `-influx-username string`: InfluxDB username.
-- `-log-interval int`: Logging interval, in seconds (log every X seconds). (default 60)
+- `-log-interval int`: Logging interval, in seconds (log every X seconds). (default `60`)
 - `-log-readings`: Log temperature/humidity readings to standard error.
-- `-max-retries int`: Maximum number of attempts to read the DHT21/AM2301 sensor. (default 12)
-- `-measurement-name string`: InfluxDB measurement name. (default "temperature_humidity")
+- `-max-retries int`: Maximum number of attempts to read the DHT21/AM2301 sensor. (default `12`)
+- `-measurement-name string`: InfluxDB measurement name. (default `temperature_humidity`)
 - `-sensor-name string`: Value for the sensor_name tag in InfluxDB. Required.
-- `-temp-max int`: Maximum temperature reading, in degrees C. Readings outside this range are discarded. (default 80)
-- `-temp-min int`: Minimum temperature reading, in degrees C. Readings outside this range are discarded. (default -40)
+- `-temp-max int`: Maximum temperature reading, in degrees C. Readings outside this range are discarded. (default `80`)
+- `-temp-min int`: Minimum temperature reading, in degrees C. Readings outside this range are discarded. (default `-40`)
 
 ## Persistent Installation with systemd
 
