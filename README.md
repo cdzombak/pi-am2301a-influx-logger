@@ -6,6 +6,12 @@ The DHT library uses C under the hood, so cross-compiling as with normal Go code
 
 So: clone the repository to the Pi Zero W, and run `go build .` from the root of the repo. Building takes a while.
 
+After compiling, I move the binary to `/usr/local/bin` and change its owner to `root`:
+```
+sudo chown root:root ./pi-am2301a-influx-logger
+sudo mv ./pi-am2301a-influx-logger /usr/local/bin
+```
+
 ## Connecting the Sensor
 
 The AM2301a/DHT21 use a custom "one wire" interface. Connect the signal wire to a GPIO pin of the Pi. (I used GPIO 4, which is pin 16 on the Pi's GPIO header.)
