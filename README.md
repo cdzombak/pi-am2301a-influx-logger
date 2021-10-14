@@ -1,4 +1,4 @@
-# pi-am2301a-influx-logger
+# `pi-am2301a-influx-logger`
 
 Logs temperature and humidity readings, on a regular basis, to InfluxDB from an AM2301/DHT21 sensor attached to a Raspberry Pi.
 
